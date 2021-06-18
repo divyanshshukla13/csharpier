@@ -15,7 +15,7 @@ namespace CSharpier.SyntaxPrinter.SyntaxNodePrinters
                 node.Kind()
                     is SyntaxKind.CollectionInitializerExpression
                         or SyntaxKind.ObjectInitializerExpression
-                && node.Parent is AssignmentExpressionSyntax ? Doc.Line : Doc.Null,
+                && node.Parent is AssignmentExpressionSyntax ? Doc.SoftLine : Doc.Null,
                 Token.Print(node.OpenBraceToken),
                 Doc.Indent(
                     Doc.Line,
